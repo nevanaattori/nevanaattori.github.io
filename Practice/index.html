@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+</html>
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+
+<html>
+<head>
+<title>Random Video</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="general">
+        <h1 class="title">PREPARE TO GET SHOUTED</h1>
+        <a href="#" id ="randomBtn" class="btn btn-default btn-lg" role="button" onclick="generateRandomLink()">SCREAM</a>
+    </div>
+    <script> 
+        var randomLinkArray = [
+            "https://youtu.be/Dma8Cq2i0cc",
+            "https://youtu.be/dFhky0BoPKI",
+            "https://youtu.be/cjqPQe-XcCg",
+            "https://youtu.be/CJU7Siaifo8",
+            "https://youtu.be/JTN3Dmu-TiE",
+            "https://youtu.be/8uFHElblycA",
+            "https://youtu.be/XbYc3SS10NQ",
+            "https://youtu.be/c2x3Tbpa_F8"
+        ]
+
+        function generateRandomLink()
+        {
+            randomLinkArray.sort(function(a,b){return 0.5 - Math.random()});
+            return randomLinkArray.pop();
+        }
+
+        document.getElementById("randomBtn").href = generateRandomLink();
+    </script>
+</body>
+</html> 
